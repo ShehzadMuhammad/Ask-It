@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 import { getPosts, deletePost } from '../../actions/postActions';
 
 
+import './styles.css';
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -46,7 +48,7 @@ class PostComponent extends Component {
 			 	<Grid item xs={12} sm={3}>
 			 		<Paper className={styles.paper}>
 				 		<Typography variant="h6" align="center">{author}</Typography>
-				 		 <h2>{post}</h2>
+				 		 <h2 className="question">{post}</h2>
 				 		 <Button component={Link} to={`/home/${_id}`}>View</Button>
 				 		 {user.id === authorID &&
                          <Button onClick={this.onDeleteClick.bind(this, _id)}>

@@ -43,6 +43,10 @@ class AddPostDialog extends React.Component {
         post: this.state.post,
       };
 
+      this.setState({
+        post: ''
+      })
+
   this.props.addPost(newPost); 
   this.toggle();
   };

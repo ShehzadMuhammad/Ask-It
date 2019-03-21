@@ -27,9 +27,10 @@ ul {
 	display: inline-block;
 }
 
-h2 {
+.commentHead {
 	display: inline-block;
 	padding-right: 45px;
+	padding-bottom: 5px;
 }
 
 .question {

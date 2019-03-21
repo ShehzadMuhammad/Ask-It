@@ -115,7 +115,7 @@ class QuestionPageComponent extends Component {
 		<div className="Contents">
 			{ comments && comments.map(({_id, author, authorID, content}) => (
 			 	<Grid item xs={12} sm={12}>
-				 		 <h2>{author}: {content}</h2>
+				 		 <h2 className="commentHead">{author}: {content}</h2>
 				 		 {user.id === authorID &&
                          <Button onClick={this.onDeleteClick.bind(this, _id)}>
 							Delete

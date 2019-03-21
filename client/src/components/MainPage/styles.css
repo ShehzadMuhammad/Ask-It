@@ -6,3 +6,29 @@ ul {
   float: left;
   display: block;
 }
+
+.Heading {
+	border: 1px solid #ff1457;
+	padding-top: 5px;
+	padding-left: 15px;
+}
+
+.Contents {
+	border: 1px dotted #bd0c3b;
+	padding-left: 15px;
+	margin-top: 10px;
+}
+
+.wrapper {
+	text-align: center;
+}
+
+.AddingComments {
+	display: inline-block;
+}
+
+h2 {
+	display: inline-block;
+	padding-right: 45px;
+}
+

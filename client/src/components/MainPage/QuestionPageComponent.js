@@ -72,15 +72,7 @@ class QuestionPageComponent extends Component {
 			console.log(error);
 		})
 
-		axios.get('/api/comments/' + this.props.match.params.question)
-		.then(response => {
-			this.setState({
-				myComments: response.data
-			})
-		})
-		.catch(function (error) {
-			console.log(error);
-		})
+		window.location.reload();
 	}
 
 	  onChange = e => {
@@ -105,15 +97,7 @@ class QuestionPageComponent extends Component {
 			console.log(error);
 		})
 
-		axios.get('/api/comments/' + this.props.match.params.question)
-		.then(response => {
-			this.setState({
-				myComments: response.data
-			})
-		})
-		.catch(function (error) {
-			console.log(error);
-		})
+		window.location.reload();
 	}
 	
 	render() {
@@ -123,9 +107,12 @@ class QuestionPageComponent extends Component {
 		return(
 
 		<div className={styles.root}>
+			<div className="Heading">
 			<Typography variant="h3">{post.post}</Typography>
-			<h3>{post.author}</h3>
+			<h3>By: {post.author}</h3>
+		</div>
 
+		<div className="Contents">
 			{ comments && comments.map(({_id, author, authorID, content}) => (
 			 	<Grid item xs={12} sm={12}>
 				 		 <h2>{author}: {content}</h2>
@@ -137,7 +124,9 @@ class QuestionPageComponent extends Component {
 		             </Grid>
 			  		))}
 
-
+			</div>
+			<div className="wrapper">
+			<div className="AddingComments">
 			 <ul>
                 <li key={user.name+1}>
                   <FormControl margin="normal">
@@ -152,10 +141,12 @@ class QuestionPageComponent extends Component {
                         </li>
                <li key='2'> 
                	<Button onClick={this.onAddClick.bind(this, user)}>
-					Add
+					Enter Comment
 				 </Button>
 				 </li>
              </ul>
+             </div>
+            </div>
 	    </div>
 	    );
 	  }

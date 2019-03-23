@@ -1,4 +1,4 @@
-# Question And AnswerSite
+# Ask It
 A MERN stack site that allows you to create a user, post a question and answer other posts
 
 This is the second MERN Stack (Mongo, React, Express and NodeJs) project that I made after the Zara Mock Site.
